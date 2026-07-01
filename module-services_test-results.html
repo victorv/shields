@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: services/dynamic-common</title>
+    <title>JSDoc: Module: services/test-results</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: services/dynamic-common</h1>
+    <h1 class="page-title">Module: services/test-results</h1>
 
     
 
@@ -34,7 +34,7 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>Common functions and utilities for tasks related to dynamic badges.</p></div>
+            <div class="description"><p>Helpers for formatting test-result badge messages and colors.</p></div>
         
 
         
@@ -69,7 +69,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_dynamic-common.js.html">services/dynamic-common.js</a>, <a href="services_dynamic-common.js.html#line1">line 1</a>
+        <a href="services_test-results.js.html">services/test-results.js</a>, <a href="services_test-results.js.html#line1">line 1</a>
     </li></ul></dd>
     
 
@@ -98,228 +98,6 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="~compoundValueSchema"><span class="type-signature">(inner, constant) </span>compoundValueSchema<span class="type-signature"> :Joi</span></h4>
-
-
-
-
-<div class="description">
-    <p>Joi schema for validating compound value.
-Checks if the compound value is of type individualValueSchema, array of individualValueSchema or empty array.</p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Joi</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_dynamic-common.js.html">services/dynamic-common.js</a>, <a href="services_dynamic-common.js.html#line37">line 37</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="~httpErrors"><span class="type-signature">(inner, constant) </span>httpErrors<span class="type-signature"> :object</span></h4>
-
-
-
-
-<div class="description">
-    <p>Map of error codes and their corresponding error messages.</p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_dynamic-common.js.html">services/dynamic-common.js</a>, <a href="services_dynamic-common.js.html#line17">line 17</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="~individualValueSchema"><span class="type-signature">(inner, constant) </span>individualValueSchema<span class="type-signature"> :Joi</span></h4>
-
-
-
-
-<div class="description">
-    <p>Joi schema for validating individual value.
-Checks if the individual value is of type string or number.</p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Joi</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_dynamic-common.js.html">services/dynamic-common.js</a>, <a href="services_dynamic-common.js.html#line27">line 27</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -330,7 +108,7 @@ Checks if the individual value is of type string or number.</p>
     
 
     
-    <h4 class="name" id="~renderDynamicBadge"><span class="type-signature">(inner) </span>renderDynamicBadge<span class="signature">(attrs)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="~renderTestResultBadge"><span class="type-signature">(inner) </span>renderTestResultBadge<span class="signature">(attrs)</span><span class="type-signature"> &rarr; {Object}</span></h4>
     
 
     
@@ -338,10 +116,9 @@ Checks if the individual value is of type string or number.</p>
 
 
 <div class="description">
-    <p>Handles rendering concerns of dynamic badges.
-Determines the label of the badge according to the tag and defaultLabel.
-Determines the message of the badge according to the prefix, suffix and value.
-Sets the color of the badge to blue.</p>
+    <p>Render badge data for a test result summary.</p>
+<p>Chooses badge color from pass/fail/skip counts and delegates message formatting
+to renderTestResultMessage.</p>
 </div>
 
 
@@ -393,7 +170,7 @@ Sets the color of the badge to blue.</p>
 
             
 
-            <td class="description last"><p>Refer to individual attributes</p>
+            <td class="description last"><p>Refer to individual attrs</p>
                 <h6>Properties</h6>
                 
 
@@ -421,13 +198,13 @@ Sets the color of the badge to blue.</p>
 
         <tr>
             
-                <td class="name"><code>defaultLabel</code></td>
+                <td class="name"><code>passed</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">number</span>
 
 
             
@@ -445,14 +222,107 @@ Sets the color of the badge to blue.</p>
 
             
 
-            <td class="description last"><p>default badge label</p></td>
+            <td class="description last"><p>Number of passing tests.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>tag</code></td>
+                <td class="name"><code>failed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Number of failing tests.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>skipped</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Number of skipped tests.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>total</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Total number of tests.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>passedLabel</code></td>
             
 
             <td class="type">
@@ -478,45 +348,14 @@ Sets the color of the badge to blue.</p>
 
             
 
-            <td class="description last"><p>If provided then this value will be appended to the badge label, e.g. <code>foobar@v1.23</code></p></td>
+            <td class="description last"><p>Label for passing tests in verbose mode.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">any</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Value or array of value to be used for the badge message</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>prefix</code></td>
+                <td class="name"><code>failedLabel</code></td>
             
 
             <td class="type">
@@ -542,14 +381,14 @@ Sets the color of the badge to blue.</p>
 
             
 
-            <td class="description last"><p>If provided then the badge message will use this value as a prefix</p></td>
+            <td class="description last"><p>Label for failing tests in verbose mode.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>suffix</code></td>
+                <td class="name"><code>skippedLabel</code></td>
             
 
             <td class="type">
@@ -575,7 +414,40 @@ Sets the color of the badge to blue.</p>
 
             
 
-            <td class="description last"><p>If provided then the badge message will use this value as a suffix</p></td>
+            <td class="description last"><p>Label for skipped tests in verbose mode.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isCompact</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>When true, use compact symbols in the message.</p></td>
         </tr>
 
     
@@ -623,7 +495,7 @@ Sets the color of the badge to blue.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_dynamic-common.js.html">services/dynamic-common.js</a>, <a href="services_dynamic-common.js.html#line79">line 79</a>
+        <a href="services_test-results.js.html">services/test-results.js</a>, <a href="services_test-results.js.html#line97">line 97</a>
     </li></ul></dd>
     
 
@@ -652,7 +524,7 @@ Sets the color of the badge to blue.</p>
 
         
 <div class="param-desc">
-    <p>Badge with label, message and color properties</p>
+    <p>Badge message and shields color name.</p>
 </div>
 
 
@@ -663,7 +535,7 @@ Sets the color of the badge to blue.</p>
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">Object</span>
 
 
     </dd>
@@ -681,7 +553,7 @@ Sets the color of the badge to blue.</p>
     
 
     
-    <h4 class="name" id="~transformAndValidate"><span class="type-signature">(inner) </span>transformAndValidate<span class="signature">(attrs)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="~renderTestResultMessage"><span class="type-signature">(inner) </span>renderTestResultMessage<span class="signature">(attrs)</span><span class="type-signature"> &rarr; {string}</span></h4>
     
 
     
@@ -689,7 +561,7 @@ Sets the color of the badge to blue.</p>
 
 
 <div class="description">
-    <p>Look up the value in the data object by key and validate the value against compoundValueSchema.</p>
+    <p>Format test counts into a badge message string.</p>
 </div>
 
 
@@ -741,7 +613,7 @@ Sets the color of the badge to blue.</p>
 
             
 
-            <td class="description last"><p>Refer to individual attributes</p>
+            <td class="description last"><p>Refer to individual attrs</p>
                 <h6>Properties</h6>
                 
 
@@ -755,6 +627,8 @@ Sets the color of the badge to blue.</p>
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -767,30 +641,131 @@ Sets the color of the badge to blue.</p>
 
         <tr>
             
-                <td class="name"><code>data</code></td>
+                <td class="name"><code>passed</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">number</span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>Object containing the data for validation</p></td>
+            <td class="description last"><p>Number of passing tests.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>key</code></td>
+                <td class="name"><code>failed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Number of failing tests.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>skipped</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Number of skipped tests.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>total</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Total number of tests.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>passedLabel</code></td>
             
 
             <td class="type">
@@ -803,10 +778,119 @@ Sets the color of the badge to blue.</p>
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>Key to retrieve the data from object for validation</p></td>
+            <td class="description last"><p>Label for passing tests in verbose mode.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>failedLabel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Label for failing tests in verbose mode.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>skippedLabel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Label for skipped tests in verbose mode.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isCompact</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>When true, use compact symbols separated by <code>|</code>.</p></td>
         </tr>
 
     
@@ -854,7 +938,7 @@ Sets the color of the badge to blue.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_dynamic-common.js.html">services/dynamic-common.js</a>, <a href="services_dynamic-common.js.html#line52">line 52</a>
+        <a href="services_test-results.js.html">services/test-results.js</a>, <a href="services_test-results.js.html#line42">line 42</a>
     </li></ul></dd>
     
 
@@ -877,45 +961,13 @@ Sets the color of the badge to blue.</p>
 
 
 
-<h5>Throws:</h5>
-
-        
-
-<dl>
-    <dt>
-        <div class="param-desc">
-        <p>Error if Joi validation fails due to invalid or no schema</p>
-        </div>
-    </dt>
-    <dd></dd>
-    <dt>
-        <dl>
-            <dt>
-                Type
-            </dt>
-            <dd>
-                
-<span class="param-type">InvalidResponse</span>
-|
-
-<span class="param-type">Error</span>
-
-
-            </dd>
-        </dl>
-    </dt>
-    <dd></dd>
-</dl>
-
-
-    
 
 
 <h5>Returns:</h5>
 
         
 <div class="param-desc">
-    <p>Value if Joi validation is success</p>
+    <p>Formatted message, or <code>no tests</code> when total is zero.</p>
 </div>
 
 
@@ -926,7 +978,7 @@ Sets the color of the badge to blue.</p>
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">string</span>
 
 
     </dd>
